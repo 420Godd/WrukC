@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: var(--blue);
+  --blue: #344854;
+  --white: #fafbfe;
+  --green: #d9f38e;
+
+}
+
+body {
+  font-size: 16px;
+}
+header {
+  color: var(--white);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  padding: 20px 30px;
+  max-height: 100px;
+
+  max-width: 1280px;
+  margin: auto;
+}
+
+nav a img {
+  height: 60px;
+  vertical-align: middle
+}
+
+.nav-link ul li {
+  display: inline-block;
+  padding: 16px 10px;
+}
+
+.sign-btn {
+  background: var(--green);
+  border-radius: 16px;
+  padding: 10px 16px;
+  font-weight: 500;
+}
+
+.nav-sign {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 27.5px;
+}
+.icon {
+  display: none;
+}
+.discord {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    font-size: 14px;
+  }
+  .icon {
+    display: block;
+  }
+  .dis {
+    display: none;
+  }
+
+  .nav-link ul {
+    display: none;
+  }
+  .discord {
+    display: block;
+  }
+  .sign-btn {
+    width: 80px;
+    height: 44px;
+  }
+
+  .nav-link.responsive ul {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    align-items: center;
+    background-color: var(--white);
+    left: 0;
+    top: 70px;
+    padding-left: 20px;
+    width: 100%;
+  }
+  .nav-link.responsive li {
+    padding: 6px 18px;
+  }
+  nav > a > img {
+    height: 40px;
+    
+  }
+}
