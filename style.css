@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
+:root {
+  --primary: #344854;
+  --white: #ffff;
+  --secondary: #d9f38e;
+  --white-alt: #fafbfe;
+  --primary-alt: #344854;
+  --secondary-alt: #bcdb63;
+}
 
 * {
   margin: 0;
@@ -7,18 +14,50 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
-  color: var(--blue);
-  --blue: #344854;
-  --white: #fafbfe;
-  --green: #d9f38e;
-
+  color: var(--primary);
 }
 
 body {
   font-size: 16px;
 }
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 header {
-  color: var(--white);
+  color: var(--white-alt);
 }
 nav {
   display: flex;
@@ -34,16 +73,17 @@ nav {
 
 nav a img {
   height: 60px;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 .nav-link ul li {
   display: inline-block;
+  font-weight: 500;
   padding: 16px 10px;
 }
 
 .sign-btn {
-  background: var(--green);
+  background: var(--secondary);
   border-radius: 16px;
   padding: 10px 16px;
   font-weight: 500;
@@ -61,6 +101,23 @@ nav a img {
 }
 .discord {
   display: none;
+}
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 30px;
+  margin: 80px auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.column-part {
+  width: 48%;
+  padding: 0 auto;
+  display: flex;
 }
 
 @media screen and (max-width: 850px) {
@@ -88,7 +145,7 @@ nav a img {
   .nav-link.responsive ul {
     display: flex;
     flex-direction: column;
-    position:absolute;
+    position: absolute;
     align-items: center;
     background-color: var(--white);
     left: 0;
@@ -97,10 +154,47 @@ nav a img {
     width: 100%;
   }
   .nav-link.responsive li {
-    padding: 6px 18px;
+    padding: 8px 20px;
   }
   nav > a > img {
     height: 40px;
-    
+  }
+  .row {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .column-part {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  h5 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  h6 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .mb-32 {
+    margin-bottom: 24px;
+  }
+  .mb-16 {
+    margin-bottom: 12px;
   }
 }
